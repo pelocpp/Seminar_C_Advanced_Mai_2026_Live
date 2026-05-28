@@ -1,0 +1,67 @@
+Github
+
+https://github.com/pelocpp
+
+Speziell zu C:
+
+https://github.com/pelocpp/c_introduction
+
+==========================================
+
+Was muss drin sein
+Was sind meine Erwartungen
+Was sind für mich die Ziele dieses Seminars
+
+Python vs. C
+
+Ab Zeiger …
+
+================================================
+
+Neues Projekt aufsetzen:  
+
+Visual Code ===> C/C++ Installation separat machen (MinGW / Gcc)
+
+Visual Studio  ==> All In
+
+   Community Version: For free
+
+
+===============================================
+
+Python vs. C:
+
+i) Programm in C fängt bei Unterprogramm 'main' an.
+
+ii) C ist formatfrei !!!
+
+iii) C wird NICHT interpretiert
+
+     C wird übersetzt
+
+iv) In C muss jede Anweisung mit einem ; abgeschlossen werden.
+
+   Ausnahme: Nach } muss kein  ; stehen
+
+
+v) In C besteht die Übersetzung aus 2 Phasen:
+
+   i) Übersetzen // Syntax prüfen // Grammatik prüfen: Macht der Compiler
+   ii) Maschinencode erzeugen: 2 Tools: Compiler & Linker
+
+
+.C Datei(en) ===> .obj File ===> EIN .exe File:  Maschinencode
+
+.obj:   Object File 
+.exe:   Datei mit ausführbaren Maschinencode
+
+vi) Nach Übersetzen (to compile) & Bauen (to build)
+    hat man ein Maschinenprogramm.
+
+  
+
+
+
+
+
+
