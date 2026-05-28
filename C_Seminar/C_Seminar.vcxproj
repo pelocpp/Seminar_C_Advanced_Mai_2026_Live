@@ -125,7 +125,9 @@
   <ItemGroup>
     <ClCompile Include="ParameterPassing.c" />
     <ClCompile Include="Program.c" />
+    <ClCompile Include="Size_t.c" />
     <ClCompile Include="Structs.c" />
+    <ClCompile Include="Union.c" />
     <ClCompile Include="Zeiger.c" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +137,13 @@
   <ItemGroup>
     <ClInclude Include="Common.h" />
     <ClInclude Include="Time.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\01_Memory.png" />
+    <Image Include="..\02_Pointer.png" />
+    <Image Include="..\03_CallByCopy.png" />
+    <Image Include="..\04_CallByAddress.png" />
+    <Image Include="..\05_CallByCopy_Time.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

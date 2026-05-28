@@ -27,6 +27,12 @@
     <ClCompile Include="Structs.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Size_t.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Union.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizen.txt" />
@@ -39,5 +45,22 @@
     <ClInclude Include="Time.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\01_Memory.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\02_Pointer.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\03_CallByCopy.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\04_CallByAddress.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\05_CallByCopy_Time.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
   </ItemGroup>
 </Project>

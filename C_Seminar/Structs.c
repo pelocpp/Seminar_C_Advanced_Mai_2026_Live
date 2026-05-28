@@ -96,3 +96,31 @@ void addSeconds(Time* self, int seconds)
         self->minutes = self->minutes + min;
     }
 }
+
+// ===========================================================
+// Embedded Programming
+
+// Reihenfolge strukturiert / gemäß Anwendung
+struct Demo
+{
+    short s; 
+    double d;
+    int n;
+    char ch;
+    long long ll;
+    float f;
+};
+
+// Reihenfolge , platzsparend, aber unübersichtlich
+// Abwägung: Was ist wichtiger: Speicherplatz oder Übersichtlichkeit
+struct Demo2
+{
+    long long ll;
+    double d;
+
+    float f;
+    int n;
+
+    short s;
+    char ch;
+};

@@ -14,9 +14,31 @@ Was sind für mich die Ziele dieses Seminars
 
 Python vs. C
 
-Ab Zeiger …
 
 ================================================
+
+== Felder
+
+== malloc / free
+
+== Dynamische Speicherverwaltung
+
+== Zeichenketten / Zeichen
+
+== Bibliothek: strlen, ...
+
+== Hash-Tabelle
+
+Wenn die Zeit noch reicht:
+
+== Gezackten Felder  (Feld von Feld ...)
+
+
+
+
+
+================================================
+
 
 Neues Projekt aufsetzen:  
 
@@ -109,7 +131,6 @@ So gen. Shadow Bytes: CC
 
 i) Diese gehören mir NICHT
 ii) Sie werden beim Verlassen des Unterprogramms geprüft.
-
 
 
 Whyyyyyyyyyyyyyyyyyyyyyyy: Was bringt mir das ????
@@ -245,14 +266,101 @@ void Time::resetTime()
 
 // ==========================================
 
+short: Per Def. 2 Bytes
+
+int:            4 Bytes
+
+long long:      8 Bytes
+
+size_t: 8 Bytes  // reden
+
+float:          4 Bytes
+
+double:         8 Bytes
+
+char:           1 Byte
+
+
+Wie / wo liegen Variablen im Speicher ???
+
+==> Ausrichtung / Alignment
+
+Alignment: Nicht jede Adresse ist als Anfangsadresse geeignet.
+
+Regel:   HW-Eigenschaften einer CPU
+
+Beispiel: Variable, die 8 Bytes Speicher benötigt (double, long long):
+
+Bei solchen Variablen muss die Adresse ein VIELFACHES von 8 sein.
+
+
+====================================================================
+
+Wer / was ist size_t ???
+
+Ein Datentyp, der neu hinzugefügt wurde:
+
+int age;   // Alter  ...
+
+i) Hmmmm, -30 ist aber keine Person alt ...
+
+ii) unsigned int age;  // ok, damit gibt es kein  -30
+
+iii) Akku:
+
+   Ein Akkumulator ist ein Register innerhalb einer CPU,
+   in dem Ergebnisse der Recheneinheit (ALU) gespeichert werden.
+
+   Man wollte einen vorzeichenlosen, gazzahligen Datentyp definieren,
+   der genauso breit (Anzahl Bits) wie das Akku Register ist.
+
+   size_t age;   // Schnelle Verarbeitung gedacht.
 
 
 
+ACHTUNG:
+
+a) size_t age;
+
+   age = age + 1;
+
+b) struct Employee
+{
+	uint8_t age2;
+};
+
+Wann was ???
+
+Zum RECHNEN:  size_t   schnell
+Zur Ablage von Daten:  uint8_t (klein)
+
+////////////////////////////////////////////////////////
+
+Strukturen
+
+Bitfelder   // Embedded !!!
+
+Union
+
+Ist für systemnahe Zwecke konzipiert:
+
+Kann kann dasselbe Stück Speicher (zB 4 Bytes)
+durch die Lupe VERSCHIEDENER Datentypen betrachten.
+
+Whyyyyyyyyyyyyyyyy
+
+Technik:
+
+union FirstUnionExample
+{
+    char   member1;
+    short  member2;
+    float  member3;
+    double member4;
+};
 
 
+// =========================================
 
-
-
-
-
+Aufzählungswert
 
