@@ -18,6 +18,12 @@
     <ClCompile Include="Program.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Zeiger.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterPassing.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizen.txt" />

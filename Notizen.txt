@@ -59,6 +59,96 @@ vi) Nach Übersetzen (to compile) & Bauen (to build)
     hat man ein Maschinenprogramm.
 
   
+=====================================================================
+
+Zeiger / Pointer
+
+=====================================================================
+
+Programmstruktur
+
+Python Wording: Wir includieren das ...
+
+C Wording: Wir benötigen eine extern-Deklaration
+
+=============================================
+
+Wo liegt n im Speicher?
+
+Welche Speicherbereiche hat ein C-Programm ???
+Welche Speicherbereiche hat ein Python-Programm ???
+
+Allgemein:
+
+Es gibt
+
+= den globalen Speicherbereich (Global)
+= den lokalen Speicherbereich (Stack / Stapel)
+= den Heap (Halde)
+
+
+
+Stack: Steht in Verbindung mit Unterprogrammen
+
+Pro Unterprogramm-Aufruf wird am Stack Platz
+für die lokalen Variablen und die Parameter geschaffen.
+
+===> Stackframe
+
+=======================================================
+
+Stärken von C:
+
+Embedded Programming / Systemnahe Programmierung:
+
+"Wo liegt die Variable im Speicher?": An einer Adresse
+
+Was gibt es auch: Aber nur im Debug-Modus // Test-Modus:
+
+So gen. Shadow Bytes: CC
+
+i) Diese gehören mir NICHT
+ii) Sie werden beim Verlassen des Unterprogramms geprüft.
+
+
+
+Whyyyyyyyyyyyyyyyyyyyyyyy: Was bringt mir das ????
+
+Weitere Stärke:  Man kann mit Adressen rechnen :)
+
+Whyyyyyyyyyyyyyyyyyyyyyyy
+
+Wie: 
+
+Man kann einen Offet dazuzählen
+
+=========================================
+
+Parameterübergabemechanismus :
+
+In C :
+
+Call-by-Value   :
+
+void malZwei(int value)
+{
+	value = 2 * value;    // Berechnung geht verloren // stellt ein Zwischenergebnis das
+}
+
+
+Call-by-Adress:
+
+void malZwei(int* adresse)
+{
+	int tmp = 0;      // lokale Variable
+  	
+	tmp = *adresse;   // Wert wird über eine Adresse indirekt eingelesen "von außen", in tmp abgelegt
+
+	tmp = 2 * tmp;    // Berechnung lokal
+
+	*adresse = tmp;   // Erge
+	Ergebnis der Berechnung wird "nach außen" über die Adresse rückgeschrieben
+}
 
 
 

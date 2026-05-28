@@ -123,7 +123,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ParameterPassing.c" />
     <ClCompile Include="Program.c" />
+    <ClCompile Include="Zeiger.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizen.txt" />
