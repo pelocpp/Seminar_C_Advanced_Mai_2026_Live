@@ -125,10 +125,16 @@
   <ItemGroup>
     <ClCompile Include="ParameterPassing.c" />
     <ClCompile Include="Program.c" />
+    <ClCompile Include="Structs.c" />
     <ClCompile Include="Zeiger.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizen.txt" />
+    <Text Include="Notizen_Python.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -146,9 +146,110 @@ void malZwei(int* adresse)
 
 	tmp = 2 * tmp;    // Berechnung lokal
 
-	*adresse = tmp;   // Erge
-	Ergebnis der Berechnung wird "nach außen" über die Adresse rückgeschrieben
+	*adresse = tmp;   // Ergebnis der Berechnung wird "nach außen" über die Adresse rückgeschrieben
 }
+
+==================================================================
+
+Was ist #define
+
+#define MaxSize 100
+
+#define ist TEXT-ERSETZUNG
+
+==================================================================
+
+Was ist eine Struktur (in C):
+
+Zusammenfassung mehrerer Variablen mit einem gemeinsamen Namen.
+
+Uhrzeit
+
+==================================================================
+
+Operatoren-Vorrang:
+
+Punkt-vor-Strich:
+
+3 + 4 * 5 = 23   // NICHT: 35
+
+Tabelle:
+
+===========================================================
+
+Ein Vergleich:
+
+// C
+struct time
+{
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+// Python
+class Time:
+    def __init__(self):
+        self.hours = 0
+        self.minutes = 0
+        self.seconds = 0
+
+
+
+Funktionen / Methoden:
+
+// C
+void addSeconds(Time* self, int seconds)
+{
+    self->seconds = self->seconds + seconds;
+
+    // Überlauf
+    if (self->seconds >= 60) {
+
+        int min = self->seconds / 60;
+
+        self->seconds = self->seconds % 60;
+        self->minutes = self->minutes + min;
+    }
+}
+
+// Python
+
+    # addSeconds
+    def addSeconds(self, seconds):
+        self.seconds = self.seconds + seconds
+
+        # Ueberlauf
+        if (self.seconds > 60):
+            min = self.seconds // 60
+            self.seconds = self.seconds % 60
+            self.minutes = self.minutes + min
+
+
+// ==========================================
+
+Zu Guter letzt:
+
+
+// C++
+extern void Time::printTime  ();
+extern void Time::resetTime  ();
+extern void Time::addSeconds (int seconds);
+
+void Time::resetTime()
+{
+    this->hours = 0;
+    this->minutes = 0;
+    this->seconds = 0;
+}
+
+// ==========================================
+
+
+
+
+
+
 
 
 

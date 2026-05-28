@@ -1,0 +1,96 @@
+
+# Welcome to your Python project!
+
+m = 789
+
+def func():
+    n = 456
+    print(f"n={n}")
+    print(f"m={m}")
+
+
+def func2():
+    # print(f"n={n}") 
+    print(f"m={m}")
+
+# func()
+
+# func2()
+
+a:int = 123
+
+print(a)
+
+a = 99.5
+
+print(a)
+
+a = "sadasdasdasd"
+
+print(a)
+
+def malZwei (n):
+    result = 2 * n
+    return result
+
+malZwei (17)
+
+# print(ergebnis)
+
+print (malZwei (17))
+
+def malZweiEx (n):
+    n = 2 * n
+    print(f"In malZweiEx: {n}")
+    
+wert = 17
+print(wert)
+
+malZweiEx (wert)
+
+print(wert)
+
+========================================
+
+# Vergleich mit C 
+
+class Time:
+    def __init__(self):
+        self.hours = 0
+        self.minutes = 0
+        self.seconds = 0
+
+    # Output Operator
+    def __str__(self):
+        return f"{self.hours}:{self.minutes}:{self.seconds}"
+
+    # reset
+    def reset(self):
+        self.hours = 0
+        self.minutes = 0
+        self.seconds = 0
+
+    # addSeconds
+    def addSeconds(self, seconds):
+        self.seconds = self.seconds + seconds
+
+        # Ueberlauf
+        if (self.seconds > 60):
+            min = self.seconds // 60
+            self.seconds = self.seconds % 60
+            self.minutes = self.minutes + min
+    
+
+now = Time()
+
+print(now)
+
+now.addSeconds (30)
+print(now)
+now.addSeconds (200)
+print(now)
+
+
+
+
+

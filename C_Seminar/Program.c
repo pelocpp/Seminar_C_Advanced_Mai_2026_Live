@@ -1,13 +1,16 @@
 #include <stdio.h>
 
-extern void pointer_demo();
-extern void demo_parameter_passing();
+#include "Common.h"
+
+//extern void pointer_demo();
+//extern void demo_parameter_passing();
+//extern void demo_structs();
 
 int anotherGlobal = 11;
 
 int main()
 {
-	demo_parameter_passing();
+	demo_structs();
 
 	return 0;
 }

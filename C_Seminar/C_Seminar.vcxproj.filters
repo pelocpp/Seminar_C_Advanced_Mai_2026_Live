@@ -24,8 +24,20 @@
     <ClCompile Include="ParameterPassing.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Structs.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizen.txt" />
+    <Text Include="Notizen_Python.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
