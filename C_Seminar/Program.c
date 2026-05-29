@@ -10,7 +10,7 @@ int anotherGlobal = 11;
 
 int main()
 {
-	mainUnionsBitfieldsEnums();
+	demo_strings();
 
 	return 0;
 }

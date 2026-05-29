@@ -1,3 +1,10 @@
+==========================================
+
+Peter Loos
+
+peter.loos@gmx.de
+-----------------
+
 Github
 
 https://github.com/pelocpp
@@ -19,9 +26,7 @@ Python vs. C
 
 == Felder
 
-== malloc / free
-
-== Dynamische Speicherverwaltung
+== Dynamische Speicherverwaltung // malloc / free
 
 == Zeichenketten / Zeichen
 
@@ -363,4 +368,176 @@ union FirstUnionExample
 // =========================================
 
 Aufzählungswert
+
+// =========================================
+
+Felder:  FESTE OBERE GRENZE !!!
+
+Feld: dt, Array: engl.
+
+Python:  List  ... Feature: Keine obere Grenze
+
+Falsche Indices werden NICHT überprüft !!!!
+
+============================================
+
+Verwenden wir Arrays ????
+
+Ja !!!!!! Weil schnell !!!
+
+
+
+
+
+
+================================================
+
+Speicherbereiche:
+
+Global 
+
+Lokal // Stack:
+
+   == Zwischenergebnisse
+   == Parameter
+   == Lokale Variablen
+   == Arrays, Strukturen
+   == ABER: Das sollte im Umfang / Groese nicht ZU GROSS sein ....
+
+   == Für umfangreiche Daten: NEIN:  Global // Dynamisch
+
+
+============================================================
+
+Dynamische Daten
+
+Global:  IMMER vorhanden.
+
+Lokal:   Nur beim Aufruf / Ausführung einer Funktion
+
+Dynamisch:   Optimum:  Wird angelegt, wenn benötigt
+                       Wird freigegeben, wenn nicht mehr benötigt
+
+== malloc liefert eine Adresse zurück
+
+== Es ist die Adresse der ersten Werts
+
+== Syntaktisch kann man mit dieser Adresse WIE MIT EINEM ARRAY arbeiten:
+
+   adr [offset]
+
+   array [index]
+
+Regel:
+
+A) Zu jedem alloc gehört ein free !!!!!!!!!!!!!!!!!!!!
+
+B) VORSICHT:  Kein double-free !!!
+
+Detected memory leaks!
+Dumping objects ->
+C:\Peter_Loos_C_Seminar\C_Seminar\C_Seminar\Dynamic.c(24) : {82} normal block at 0x00000205A6CFF670, 20 bytes long.
+ Data: <                > 00 00 00 00 02 00 00 00 04 00 00 00 06 00 00 00 
+Object dump complete.
+================================================
+
+Zeichen // Character
+
+Zeichenketten // String 
+
+------
+
+Zeichen (char) und Ganzen Zahlen (int) : Synergie / Dualität
+
+char und int:  befreundet
+
+---
+
+String, Zeichenfolge, Zeichenkette
+
+Es gibt in C nicht DIREKT einen Datentyp für Strings.
+
+Es gibt zwei Optionen:
+
+A)   const char*   // Adresse in einem Read-Only Speicherbereich
+
+Wo liegt "ABCDE" im Speicher ???
+
+"ABCDE" ist eine KONSTANTE Zeichenkette !!!
+
+            Diese liegen in einem READ-ONLY Datenbereich.
+
+i) NICHT am Heap // malloc ....
+
+ii) Stack:  Unwahrscheinlich
+
+==> Read-Only globales Datensegment.
+
+B) Es gibt natürlich Zeichenketten auch in einem Writable Speicherbereich
+
+Typ: Array von Zeichen mit einer 0 am Ende !!!
+
+==============================================
+
+Länge einer Zeichenkette:
+
+Muss gesucht werden: Ist die 0 am Ende.
+
+Wie kann ich das ermitteln: Nur durch eine Funktion, die die 0 sucht.
+
+
+==============================================
+
+Wird Speicher vor seiner Verwendung mit 0 vorbelegt oder nicht ???
+
+Ja / Nein.
+
+Global: JA
+
+Stack / Lokal: Nein
+Heap:          Nein
+
+==============================================
+
+Zeichenketten:
+
+A) Konstante:   Liegen in einem Read-Only Segment.
+                Diese ist automatisch mit einer 0 terminiert.
+
+B) Nicht-Konstante: Liegen in einem char-Array;
+                    Achtung: Diese muss mit einer 0 terminiert / abgeschlossen werden.
+
+
+
+==============================================================
+
+Anhängen // Append // Concatenate
+
+Python:
+
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+
+In C:
+
+a) Erste Zeichenkette (kann konstant oder nicht konstant)
+
+b) Zweite Zeichenkette (kann konstant oder nicht konstant)
+
+c) Ergebnis: Nicht-Konstante
+
+
+string_length()
+string_append ()
+
+Can we do better:  Yes, we can:  CRT // String-Funktionen bereit:
+
+
+
+// ======================================================
+
+TDD  ==> Test Driven Development
+
 

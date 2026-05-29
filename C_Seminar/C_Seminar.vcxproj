@@ -123,10 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dynamic.c" />
     <ClCompile Include="ParameterPassing.c" />
     <ClCompile Include="Program.c" />
     <ClCompile Include="Size_t.c" />
+    <ClCompile Include="Strings.c" />
     <ClCompile Include="Structs.c" />
+    <ClCompile Include="Felder.c" />
     <ClCompile Include="Union.c" />
     <ClCompile Include="Zeiger.c" />
   </ItemGroup>
@@ -144,6 +147,7 @@
     <Image Include="..\03_CallByCopy.png" />
     <Image Include="..\04_CallByAddress.png" />
     <Image Include="..\05_CallByCopy_Time.png" />
+    <Image Include="..\06_Heap.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -33,6 +33,15 @@
     <ClCompile Include="Union.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Felder.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Dynamic.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Strings.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizen.txt" />
@@ -60,6 +69,9 @@
       <Filter>Ressourcendateien</Filter>
     </Image>
     <Image Include="..\05_CallByCopy_Time.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\06_Heap.png">
       <Filter>Ressourcendateien</Filter>
     </Image>
   </ItemGroup>
