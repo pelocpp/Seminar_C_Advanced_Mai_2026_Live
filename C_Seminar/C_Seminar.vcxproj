@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dictionary.c" />
     <ClCompile Include="Dynamic.c" />
     <ClCompile Include="ParameterPassing.c" />
     <ClCompile Include="Program.c" />
@@ -139,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Dictionary.h" />
     <ClInclude Include="Time.h" />
   </ItemGroup>
   <ItemGroup>

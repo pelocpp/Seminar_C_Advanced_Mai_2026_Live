@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <string.h>
 
 void demo_character()
 {
@@ -22,7 +23,7 @@ void demo_character()
 	printf("sizeof(char): %llu\n", sizeof(char));
 }
 
-void demo_strings_01()
+static void demo_strings_01()
 {
 	const char* s = "ABCDE";
 
@@ -39,9 +40,9 @@ void demo_strings_01()
 	// s[3] = '!';
 }
 
-char zeichenkette[10];   //  Global !!!!!!!!!!!!!!!
+static char zeichenkette[10] = { '\0' };   //  Global !!!!!!!!!!!!!!!
 
-void demo_strings_02()
+static void demo_strings_02()
 {
 	// char zeichenkette[10];   // Stack !!!!!!!!!!!!!!!
 
@@ -65,7 +66,7 @@ void demo_strings_02()
 
 // i) Länge einer Zeichenkette
 
-size_t string_length(const char* cp)
+static size_t string_length(const char* cp)
 {
 	size_t n = 0;  // n = length
 
@@ -77,14 +78,14 @@ size_t string_length(const char* cp)
 	return n;
 }
 
-void demo_strings_03()
+static void demo_strings_03()
 {
 	size_t len = string_length("ABCDE");
 
 	printf("Len: %zu\n", len);
 }
 
-void string_append(const char* s1, const char* s2, char* result)
+static void string_append(const char* s1, const char* s2, char* result)
 {
 	// erste Zeichenkette umkopieren
 	int n = 0;
@@ -107,7 +108,7 @@ void string_append(const char* s1, const char* s2, char* result)
 	result[n] = '\0';
 }
 
-void demo_strings_04()
+static void demo_strings_04()
 {
 	char ergebnis[20];
 
@@ -116,8 +117,33 @@ void demo_strings_04()
 	printf("string_append: %s\n", ergebnis);
 }
 
+// =================================================================
+
+
+static void demo_strings_05()
+{
+	size_t len = strlen("ABCDE");
+	printf("Len: %zu\n", len);
+
+	//char ergebnis[20];
+	//string_append("ABCDE", "123", ergebnis);
+	//printf("string_append: %s\n", ergebnis);
+
+	// altes CRT API - von MS nicht mehr unterstützt
+ //   char ergebnis[20] = "ABCDE";
+	//strcat(ergebnis, "123");
+
+	char ergebnis[20] = "ABCDE";
+	strcat_s(ergebnis, 20, "123");
+	printf("strcat_s: %s\n", ergebnis);
+
+
+}
+
 void demo_strings()
 {
-	demo_strings_04();
+	demo_strings_05();
 }
+
+// =================================================================
 

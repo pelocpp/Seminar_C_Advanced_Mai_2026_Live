@@ -42,6 +42,9 @@
     <ClCompile Include="Strings.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Dictionary.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizen.txt" />
@@ -52,6 +55,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Time.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Dictionary.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

@@ -535,9 +535,112 @@ string_append ()
 Can we do better:  Yes, we can:  CRT // String-Funktionen bereit:
 
 
+CRT:   C RunTime Library
+
+printf
+
+malloc / free
+
+
 
 // ======================================================
 
 TDD  ==> Test Driven Development
 
+// ======================================================
+
+Programmstruktur / Speicherbereiche
+
+static:   Nur in der aktuellen Datei verfügbar.
+
+Ohne static: Im gesamten Programm
+
+Weitere Einsatzmöglichkeit für static:
+
+// ======================================================
+// ======================================================
+
+Ein komplexere Betrachtung zum Abschluss:
+
+Dictionary a la Python
+
+Was ist ein Dictionary:
+
+Etwas ganz anderes als ein Feld / Array:
+
+A) Array:
+
+int lottoZahlen [6] = { 23, 14, 43, 22, 15, 44 };
+
+B) Dictionary:
+
+Typ, bestehend aus Schlüssel-Wert Paaren:
+
+Beispiel:
+
+Telefonbuch: "Hans" ==> 234234  / neue Tel.Nr. 34534534
+
+   Schlüssel: Zeichenkette (Name) 
+   Wert:      int (Nummer)
+
+Lexikon Deutsch - Englisch
+
+   Schlüssel: Zeichenkette (Wort): Türe 
+   Wert:      Zeichenkette (Wort): door 
+
+Theoretisch:
+
+Wie wird in der Regel ein Dictionary realisiert:  Hashtabelle.
+
+====================================================================
+
+#
+# Definition des Dictionaries: Schlüssel: Personalnummer  (eindeutig)
+#                              Wert:      Name des Mitarbeites
+mitarbeiter = {
+    101: "Anna Schmidt",
+    102: "Stefan Müller",
+    103: "Maria Fischer"
+}
+
+# Zugriff auf einen Wert über den Schlüssel
+print(mitarbeiter[101])  # Ausgabe: Anna Schmidt
+
+# 1. Neuen Eintrag hinzufügen
+mitarbeiter[104] = "Kevin Meier"    // neuer Schlüssel
+
+# 2. Bestehenden Wert aktualisieren
+mitarbeiter[102] = "Stefan Müller-Lüdenscheidt"   // alter Schlüssel, neuer Wert
+
+# 3. Nach einem Schlüssel suchen (sichere Methode)
+gesuchter_schluessel = 102
+
+if gesuchter_schluessel in mitarbeiter:
+    print(f"Gefunden: {mitarbeiter[gesuchter_schluessel]}")
+else:
+    print(f"Schlüssel {gesuchter_schluessel} existiert nicht.")
+
+# Alternative Suche mit Standardwert, falls nicht vorhanden
+name = mitarbeiter.get(102, "Unbekannter Mitarbeiter")
+
+print(name)  # Ausgabe: Unbekannter Mitarbeiter
+
+
+==============================================================
+
+Wie kann man ein Dictionary realisieren ???
+
+Schlüssel-Wert Paare
+Key-Value Pair
+
+Ein solches Paar:  Struktur
+
+Konkret:  Personalnummer ==> Namen
+
+Annahme:  Personalnummer 0 gibt es nicht.
+
+
+==========================================================
+Ende
+==========================================================
 

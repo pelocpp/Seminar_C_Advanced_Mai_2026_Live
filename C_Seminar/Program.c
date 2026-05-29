@@ -8,9 +8,20 @@
 
 int anotherGlobal = 11;
 
+static demo_static()
+{
+	static int n = 100;   // globale Variable, ist aber nur in dieser Funktion verfügbar
+	n = n + 1;
+	printf("n = %d\n", n);
+}
+
 int main()
 {
-	demo_strings();
+	//demo_static();
+	//demo_static();
+	//demo_static();
+
+	test_dictionary();
 
 	return 0;
 }

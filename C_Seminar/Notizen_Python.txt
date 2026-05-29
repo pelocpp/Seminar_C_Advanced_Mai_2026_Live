@@ -96,5 +96,36 @@ print(now)
 
 
 
+========================================================
+
+
+
+
+
+#
+# Definition des Dictionaries
+mitarbeiter = {
+    101: "Anna Schmidt",
+    102: "Stefan Müller",
+    103: "Maria Fischer"
+}
+
+# Zugriff auf einen Wert über den Schlüssel
+print(mitarbeiter[101])  # Ausgabe: Anna Schmidt
+
+# 1. Neuen Eintrag hinzufügen
+mitarbeiter[104] = "Kevin Meier"
+
+# 2. Bestehenden Wert aktualisieren
+mitarbeiter[102] = "Stefan Müller-Lüdenscheidt"
+
+# 3. Nach einem Schlüssel suchen (sichere Methode)
+gesuchter_schluessel = 102
+
+if gesuchter_schluessel in mitarbeiter:
+    print(f"Gefunden: {mitarbeiter[gesuchter_schluessel]}")
+else:
+    print(f"Schlüssel {gesuchter_schluessel} existiert nicht.")
+
 
 
